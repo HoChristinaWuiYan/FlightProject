@@ -1,0 +1,20 @@
+{
+  "name": "flightproject",
+  "version": "1.0.0",
+  "description": "Project to display data about flight paths",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christina Ho",
+  "license": "ISC",
+  "dependencies": {
+    "dist": "^0.1.2",
+    "get-json": "^1.0.1",
+    "googlemaps": "^1.12.0",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1",
+    "node-localstorage": "^1.3.1",
+    "request": "^2.88.0"
+  }
+}
