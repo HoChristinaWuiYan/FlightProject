@@ -5,27 +5,7 @@ const request = require("request");
 const googlemaps = require("googlemaps");
 
 const hostname = "127.0.0.1";
-const port = 3000;
-
-request('https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?', function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-     const outputJSON = new Object();
-     outputJSON.coordList = [];
-     var importedJSON = JSON.parse(body);
-     importedJSON.acList.forEach(function(aircraft){
-  outputJSON.coordList.push([aircraft.Lat, aircraft.Long]);
-    });
-     
-     var JSONdata = JSON.stringify(outputJSON);
-     fs.writeFile("flightdata.json", JSONdata, function(err) {
-    if (err) {
-        console.log(err);
-    }
-}); 
-  }
-})
-
-
+const port = 3001;
 
 fs.readFile("main.html", (err, html) => {
     if(err){
